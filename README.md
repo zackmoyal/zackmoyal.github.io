@@ -11,7 +11,7 @@ Fortnite AI Analyzer is a web application that provides detailed statistics and 
 
 ## Technologies Used
 
-- **Backend**: ASP.NET Core 6 MVC
+- **Backend**: ASP.NET Core 8 MVC
 - **Frontend**: HTML, CSS, JavaScript, and Bootstrap
 - **Database**: No database required; data is fetched in real-time from the API.
 - **API Integration**: Powered by [FortniteAPI.io](https://fortniteapi.io)
@@ -23,7 +23,7 @@ Fortnite AI Analyzer is a web application that provides detailed statistics and 
 
 To run the application locally, ensure you have the following installed:
 
-1. .NET Core SDK 6.0 or higher
+1. .NET Core SDK 8.0 or higher
 2. Visual Studio 2022 (or later)
 
 ### Installation
