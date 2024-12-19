@@ -1,6 +1,6 @@
-# Fortnite AI Analyzer
+# Fortnite Stats Analyzer
 
-Fortnite AI Analyzer is a web application that provides detailed statistics and insights for Fortnite players. By integrating with the Fortnite API, it allows users to view and analyze player performance, including match history, kill/death ratios, win rates, and other key metrics.
+Fortnite Stats Analyzer is a web application that provides detailed statistics and insights for Fortnite players. By integrating with the Fortnite API, it allows users to view and analyze player performance, including match history, kill/death ratios, win rates, and other key metrics.
 
 ## Features
 
