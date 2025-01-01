@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Fortnite Stats Analyzer";
+}
+
+<header>
+    <div class="logo-container">
+        <img class="logo" src="/images/fortnite-logo.png" alt="Fortnite Logo" />
+    </div>
+</header>
+
+<div class="home-page-enter-username-section">
+    <h1>Fortnite Stats Analyzer</h1>
+    <p>Enter a Fortnite username to get their stats and get generated feedback!</p>
+
+    <!-- Add an ID to the form for easy selection -->
+    <form id="usernameForm" method="post" asp-controller="Home" asp-action="GetStats">
+        <div class="home-page-form-group">
+            <label for="username">Enter Fortnite Username:</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required />
+        </div>
+        <button type="submit" class="btn">Get Stats</button>
+    </form>
+</div>
+
+<div>
+    @if (ViewBag.Error != null)
+    {
+        <p class="text-danger">@ViewBag.Error</p>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            const usernameInput = document.getElementById('username');
+
+            form.addEventListener('submit', async function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const username = usernameInput.value.trim();
+
+                // Client-side validation: Check if the username is empty
+                if (username === '') {
+                    alert("Please enter a username.");
+                    return;
+                }
+
+                // Server-side validation: Check if the username is valid using AJAX
+                const isValid = await validateUsername(username);
+
+                if (isValid) {
+                    // If valid, proceed with form submission
+                    form.submit();
+                } else {
+                    alert("Invalid username. Please enter a valid Fortnite username.");
+                }
+            });
+
+            // Function to validate username using AJAX
+            async function validateUsername(username) {
+                try {
+                    const response = await fetch(`/Home/ValidateUsername?username=${encodeURIComponent(username)}`);
+
+                    if (!response.ok) {
+                        console.error('Error response from server:', response.statusText);
+                        return false;
+                    }
+
+                    const result = await response.json();
+
+                    return result.success; // Return true if valid, false otherwise
+                } catch (error) {
+                    console.error('Error validating username:', error);
+                    return false; // Return false on any error
+                }
+            }
+        });
+    </script>
+}

@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\views\\home\\statsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:views\\home\\statsview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\models\\fortnitestatsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:models\\fortnitestatsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\services\\fortnitestatsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:services\\fortnitestatsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\models\\fortnitestatsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:models\\fortnitestatsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|c:\\users\\zackm\\onedrive\\fortnitestatsanalyzer\\fortnitestatsanalyzer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CBB8F8C5-81B7-4681-AC1E-8F46CB2AF38D}|FortniteStatsAnalyzer.csproj|solutionrelative:fortnitestatsanalyzer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StatsView.cshtml",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Views\\Home\\StatsView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\StatsView.cshtml",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Views\\Home\\StatsView.cshtml",
+              "RelativeToolTip": "Views\\Home\\StatsView.cshtml",
+              "ViewState": "AgIAADsBAAAAAAAAAAAAAEoBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-29T11:33:55.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FortniteStatsService.cs",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Services\\FortniteStatsService.cs",
+              "RelativeDocumentMoniker": "Services\\FortniteStatsService.cs",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Services\\FortniteStatsService.cs",
+              "RelativeToolTip": "Services\\FortniteStatsService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T04:53:57.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-29T04:48:41.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T04:50:06.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FortniteStatsModel.cs",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Models\\FortniteStatsModel.cs",
+              "RelativeDocumentMoniker": "Models\\FortniteStatsModel.cs",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Models\\FortniteStatsModel.cs",
+              "RelativeToolTip": "Models\\FortniteStatsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T01:24:54.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FortniteStatsResponse.cs",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Models\\FortniteStatsResponse.cs",
+              "RelativeDocumentMoniker": "Models\\FortniteStatsResponse.cs",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Models\\FortniteStatsResponse.cs",
+              "RelativeToolTip": "Models\\FortniteStatsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T01:24:52.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAYwKoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-04T10:31:29.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T10:26:48.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FortniteStatsAnalyzer.csproj",
+              "DocumentMoniker": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\FortniteStatsAnalyzer.csproj",
+              "RelativeDocumentMoniker": "FortniteStatsAnalyzer.csproj",
+              "ToolTip": "C:\\Users\\zackm\\OneDrive\\FortniteStatsAnalyzer\\FortniteStatsAnalyzer.csproj",
+              "RelativeToolTip": "FortniteStatsAnalyzer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-04T10:28:42.18Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

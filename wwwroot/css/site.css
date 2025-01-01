@@ -1,0 +1,437 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic Setup */
+html {
+    font-size: 14px;
+    position: relative;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-bottom: 3px solid #feda4a; /* Fortnite yellow border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    font-family: 'Bangers', cursive; /* Fortnite font */
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it stays on top */
+    padding: 10px 0;
+}
+
+    .custom-navbar a.navbar-brand {
+        font-size: 2.5rem;
+        color: #0a74da; /* Fortnite blue color */
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Shadow for brand text */
+    }
+
+/* Custom Navbar Link Styles */
+.custom-nav-link {
+    font-size: 1.6rem;
+    color: #0a74da; /* Default Fortnite blue */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-decoration: none; /* Remove underline if any */
+}
+
+    .custom-nav-link:hover {
+        color: #feda4a; /* Fortnite yellow on hover */
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+.nav-spacer {
+    width: 10px; /* Adjust width as needed */
+}
+
+.nav-separator {
+    margin: 0 10px; /* Add space around the dash */
+    color: #0a74da; /* Fortnite yellow color */
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust size if needed */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: url('/images/fortnite-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Bangers', cursive;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 70px;
+}
+
+/* Home Page Styling */
+.home-page-enter-username-section {
+    margin: 20px auto;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #0a74da, #feda4a);
+    border: 4px solid #feda4a;
+    border-radius: 15px;
+    max-width: 40%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    animation: glowing-border 1.5s infinite alternate;
+    text-align: center;
+}
+
+    .home-page-enter-username-section h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .home-page-enter-username-section p {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        text-align: center;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+.home-page-form-group {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+    .home-page-form-group label {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .home-page-form-group input {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        border: 2px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+        .home-page-form-group input:focus {
+            border-color: #feda4a;
+            box-shadow: 0 0 10px #feda4a, 0 0 20px #feda4a;
+        }    
+
+/* Global Styles */
+h1, h2 {
+    text-align: center;
+    color: #feda4a; /* Fortnite yellow */
+    font-family: 'Bangers', cursive;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Shadow for headers */
+}
+
+p {
+    font-size: 1.6em; /* Paragraph text size */
+    text-align: center;
+}
+
+hr {
+    border: 3px solid #feda4a; /* Fortnite yellow */
+    margin: 20px 0; /* Space around the lines */
+    box-shadow: 0px 0px 4px 2px black; /* Black border effect */
+}
+
+label {
+    font-size: 1.6em; /* Label text size */
+    text-align: center;
+}
+
+input[type="text"]::placeholder {
+    font-size: 1.5rem; /* Placeholder text size */
+}
+
+.text-danger {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Stats Section Styling */
+.stats-section {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #0a74da, #feda4a); /* Fortnite-like gradient */
+    border: 4px solid #feda4a; /* Fortnite yellow border */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Adds depth */
+    animation: glowing-border 1.5s infinite alternate; /* Glowing border animation */
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    opacity: 0; /* Initially invisible */
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background: linear-gradient(135deg, #0a74da, #feda4a); /* Fortnite-like gradient */
+    border: 4px solid #feda4a; /* Fortnite yellow border */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Adds depth */
+    animation: glowing-border 1.5s infinite alternate; /* Glowing border animation */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+.feedback-section.fade-in {
+    display: block; /* Makes the section visible */
+    opacity: 1; /* Fades in smoothly */
+    transition: opacity 1s ease-in-out;
+}
+
+.section-divider {
+    border: 3px solid #feda4a; /* Fortnite yellow */
+    margin: 20px 0; /* Space around the lines */
+    box-shadow: 0px 0px 4px 2px black; /* Black border effect */
+}
+
+.header-box {
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: linear-gradient(135deg, #0a74da, #feda4a); /* Background gradient */
+    padding: 20px 30px; /* Adjust padding for the header */
+    border-radius: 15px;
+    max-width: 45%; /* Makes it narrower */
+    margin: 20px auto; /* Centers the box horizontally */
+    color: #feda4a;
+    font-family: 'Bangers', cursive;
+    font-size: 4rem; /* Larger font size for emphasis */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Shadow effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Depth shadow */
+    border: 4px solid; /* Add border for the glowing effect */
+    animation: glowing-border 1.5s infinite alternate;
+}
+
+header img.logo {
+    width: 300px; /* Adjust as needed */
+    border-radius: 10px; /* Rounded edges on the logo image itself */
+}
+
+@keyframes glowing-border {
+    0% {
+        border-color: #feda4a;
+    }
+
+    100% {
+        border-color: #0a74da;
+    }
+}
+
+/* Logo Container for Tight Border Around Logo */
+.logo-container {
+    display: flex; /* Use flexbox to center the logo container */
+    justify-content: center;
+    align-items: center;
+    border: 4px solid; /* Border thickness */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Shadow effect */
+    animation: glowing-border 1.5s infinite alternate;
+    width: fit-content; /* Adjust to tightly wrap around the image */
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 30px;
+}
+
+/* Tab Container and Buttons */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #0a74da; /* Solid blue background */
+    border: none;
+    border-radius: 8px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+    .tab-button.active {
+        background: #feda4a;
+        color: black;
+        box-shadow: 0 0 10px #feda4a;
+    }
+
+    .tab-button:hover {
+        background-color: #feda4a; /* Hover effect with solid yellow */
+        color: black;
+    }
+
+/* Form Group */
+.form-group {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Input Field */
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+    input[type="text"]:focus {
+        box-shadow: 0 0 10px #feda4a, 0 0 20px #feda4a;
+        border: 1px solid #feda4a;
+    }
+
+/* Button Styling */
+.btn {
+    display: block;
+    width: 40%;
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.7em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+    .btn:hover {
+        background-color: #feda4a;
+        transform: translateY(-3px);
+        box-shadow: 0 0 15px #feda4a, 0 0 30px #feda4a; /* Glowing effect */
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+        box-shadow: none;
+    }
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 20px auto;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+    table th {
+        font-size: 1.4rem;
+        color: #feda4a; /* Bright Fortnite yellow */
+        background: rgba(0, 0, 0, 0.8); /* Darker background for the headers */
+        padding: 10px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        border-bottom: 1px solid #ddd;
+        font-family: 'Bangers', cursive;
+    }
+
+    table td {
+        color: white;
+        padding: 10px;
+        font-size: 1.3rem;
+        background: rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid #ddd;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Text shadow effect */
+    }
+
+/* Sticky Footer Styling */
+footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-top: 3px solid #feda4a; /* Fortnite yellow border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    color: black;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 15px 0; /* Vertical centering */
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+}
+
+    /* Footer Links */
+    footer a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 5px; /* Space between text and link */
+        transition: color 0.3s ease;
+    }
+
+        footer a:hover {
+            color: #feda4a; /* Fortnite yellow on hover */
+        }
+
+/* Text shadow for the intro paragraph */
+.stats-section p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+/* Text shadow for form labels */
+.form-group label {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+.feedback-section p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Shadow effect */
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feedback-title {
+    color: #feda4a; /* Blue color for titles */
+    font-weight: bold;
+}
+
+.feedback-button-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.explore-feedback-btn {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 30px auto;
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .explore-feedback-btn:hover {
+        background-color: #feda4a;
+        color: black;
+    }
