@@ -1,0 +1,335 @@
+﻿@model FortniteStatsAnalyzer.Models.FortniteStatsResponse
+@{
+    ViewData["Title"] = "Player Stats";
+}
+
+<header>
+    <div class="logo-container">
+        <img class="logo" src="/images/fortnite-logo.png" alt="Fortnite Logo" />
+    </div>
+</header>
+
+<div class="header-box">
+    <h1>@(!string.IsNullOrWhiteSpace(Model.Name) ? $"{Model.Name}'s Fortnite Stats" : "Fortnite Stats")</h1>
+</div>
+
+<!-- Toggle Tabs -->
+<div class="tab-container">
+    <button class="tab-button active" onclick="showStats('global')">Global Stats</button>
+    <button class="tab-button" onclick="showStats('input')">Per Input Stats</button>
+</div>
+
+<!-- Stats Sections -->
+
+<!-- Global Stats Section -->
+<div id="global-stats" class="stats-section">
+    <h2>Global Stats</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Game Mode</th>
+                <th>K/D Ratio</th>
+                <th>Win Rate</th>
+                <th>Top 1 Placements</th>
+                <th>Total Kills</th>
+                <th>Matches Played</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Populate Global Stats -->
+            @if (Model.GlobalStats?.Solo != null)
+            {
+                <tr>
+                    <td>Solo</td>
+                    <td>@Model.GlobalStats.Solo.Kd</td>
+                    <td>@Model.GlobalStats.Solo.Winrate</td>
+                    <td>@Model.GlobalStats.Solo.PlaceTop1</td>
+                    <td>@Model.GlobalStats.Solo.Kills</td>
+                    <td>@Model.GlobalStats.Solo.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.GlobalStats?.Duo != null)
+            {
+                <tr>
+                    <td>Duo</td>
+                    <td>@Model.GlobalStats.Duo.Kd</td>
+                    <td>@Model.GlobalStats.Duo.Winrate</td>
+                    <td>@Model.GlobalStats.Duo.PlaceTop1</td>
+                    <td>@Model.GlobalStats.Duo.Kills</td>
+                    <td>@Model.GlobalStats.Duo.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.GlobalStats?.Squad != null)
+            {
+                <tr>
+                    <td>Squad</td>
+                    <td>@Model.GlobalStats.Squad.Kd</td>
+                    <td>@Model.GlobalStats.Squad.Winrate</td>
+                    <td>@Model.GlobalStats.Squad.PlaceTop1</td>
+                    <td>@Model.GlobalStats.Squad.Kills</td>
+                    <td>@Model.GlobalStats.Squad.MatchesPlayed</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Button for Global Feedback -->
+<button class="btn explore-feedback-btn-global" onclick="showFeedback('global')">Explore Global Feedback</button>
+
+<!-- Global Feedback Section -->
+<div id="feedback-global" class="feedback-section" style="display: none;">
+    <h2>Generated Feedback for Global Stats</h2>
+    <hr class="section-divider" />
+
+    <!-- Feedback for Solo in Global Stats -->
+    @if (Model.GlobalStats?.Solo != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.GlobalStats.Solo.Kd, Model.GlobalStats.Solo.Winrate, Model.GlobalStats.Solo.PlaceTop1, Model.GlobalStats.Solo.Kills, Model.GlobalStats.Solo.MatchesPlayed, "Solo"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Duo in Global Stats -->
+    @if (Model.GlobalStats?.Duo != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.GlobalStats.Duo.Kd, Model.GlobalStats.Duo.Winrate, Model.GlobalStats.Duo.PlaceTop1, Model.GlobalStats.Duo.Kills, Model.GlobalStats.Duo.MatchesPlayed, "Duo"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Squad in Global Stats -->
+    @if (Model.GlobalStats?.Squad != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.GlobalStats.Squad.Kd, Model.GlobalStats.Squad.Winrate, Model.GlobalStats.Squad.PlaceTop1, Model.GlobalStats.Squad.Kills, Model.GlobalStats.Squad.MatchesPlayed, "Squad"))</p>
+        <hr />
+    }
+</div>
+
+<!-- Per Input Stats Section -->
+<div id="input-stats" class="stats-section" style="display: none;">
+    <h2>Per Input Stats</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Game Mode (Input Method)</th>
+                <th>K/D Ratio</th>
+                <th>Win Rate</th>
+                <th>Top 1 Placements</th>
+                <th>Total Kills</th>
+                <th>Matches Played</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Populate Per Input Stats -->
+            @if (Model.PerInput?.Gamepad?.Solo != null)
+            {
+                <tr>
+                    <td>Solo (Console)</td>
+                    <td>@Model.PerInput.Gamepad.Solo.Kd</td>
+                    <td>@Model.PerInput.Gamepad.Solo.Winrate</td>
+                    <td>@Model.PerInput.Gamepad.Solo.PlaceTop1</td>
+                    <td>@Model.PerInput.Gamepad.Solo.Kills</td>
+                    <td>@Model.PerInput.Gamepad.Solo.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.PerInput?.Gamepad?.Duo != null)
+            {
+                <tr>
+                    <td>Duo (Console)</td>
+                    <td>@Model.PerInput.Gamepad.Duo.Kd</td>
+                    <td>@Model.PerInput.Gamepad.Duo.Winrate</td>
+                    <td>@Model.PerInput.Gamepad.Duo.PlaceTop1</td>
+                    <td>@Model.PerInput.Gamepad.Duo.Kills</td>
+                    <td>@Model.PerInput.Gamepad.Duo.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.PerInput?.Gamepad?.Squad != null)
+            {
+                <tr>
+                    <td>Squad (Console)</td>
+                    <td>@Model.PerInput.Gamepad.Squad.Kd</td>
+                    <td>@Model.PerInput.Gamepad.Squad.Winrate</td>
+                    <td>@Model.PerInput.Gamepad.Squad.PlaceTop1</td>
+                    <td>@Model.PerInput.Gamepad.Squad.Kills</td>
+                    <td>@Model.PerInput.Gamepad.Squad.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.PerInput?.KeyboardMouse?.Solo != null)
+            {
+                <tr>
+                    <td>Solo (Keyboard & Mouse)</td>
+                    <td>@Model.PerInput.KeyboardMouse.Solo.Kd</td>
+                    <td>@Model.PerInput.KeyboardMouse.Solo.Winrate</td>
+                    <td>@Model.PerInput.KeyboardMouse.Solo.PlaceTop1</td>
+                    <td>@Model.PerInput.KeyboardMouse.Solo.Kills</td>
+                    <td>@Model.PerInput.KeyboardMouse.Solo.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.PerInput?.KeyboardMouse?.Duo != null)
+            {
+                <tr>
+                    <td>Duo (Keyboard & Mouse)</td>
+                    <td>@Model.PerInput.KeyboardMouse.Duo.Kd</td>
+                    <td>@Model.PerInput.KeyboardMouse.Duo.Winrate</td>
+                    <td>@Model.PerInput.KeyboardMouse.Duo.PlaceTop1</td>
+                    <td>@Model.PerInput.KeyboardMouse.Duo.Kills</td>
+                    <td>@Model.PerInput.KeyboardMouse.Duo.MatchesPlayed</td>
+                </tr>
+            }
+
+            @if (Model.PerInput?.KeyboardMouse?.Squad != null)
+            {
+                <tr>
+                    <td>Squad (Keyboard & Mouse)</td>
+                    <td>@Model.PerInput.KeyboardMouse.Squad.Kd</td>
+                    <td>@Model.PerInput.KeyboardMouse.Squad.Winrate</td>
+                    <td>@Model.PerInput.KeyboardMouse.Squad.PlaceTop1</td>
+                    <td>@Model.PerInput.KeyboardMouse.Squad.Kills</td>
+                    <td>@Model.PerInput.KeyboardMouse.Squad.MatchesPlayed</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Button for Per Input Feedback -->
+<button class="btn explore-feedback-btn-input" onclick="showFeedback('input')">Explore Per Input Feedback</button>
+
+<!-- Per Input Feedback Section -->
+<div id="feedback-input" class="feedback-section" style="display: none;">
+    <h2>Generated Feedback for Per Input Stats</h2>
+    <hr class="section-divider" />
+
+    <!-- Feedback for Solo (Gamepad) -->
+    @if (Model.PerInput?.Gamepad?.Solo != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.PerInput.Gamepad.Solo.Kd, Model.PerInput.Gamepad.Solo.Winrate, Model.PerInput.Gamepad.Solo.PlaceTop1, Model.PerInput.Gamepad.Solo.Kills, Model.PerInput.Gamepad.Solo.MatchesPlayed, "Solo (Console)"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Duo (Gamepad) -->
+    @if (Model.PerInput?.Gamepad?.Duo != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.PerInput.Gamepad.Duo.Kd, Model.PerInput.Gamepad.Duo.Winrate, Model.PerInput.Gamepad.Duo.PlaceTop1, Model.PerInput.Gamepad.Duo.Kills, Model.PerInput.Gamepad.Duo.MatchesPlayed, "Duo (Console)"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Squad (Gamepad) -->
+    @if (Model.PerInput?.Gamepad?.Squad != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.PerInput.Gamepad.Squad.Kd, Model.PerInput.Gamepad.Squad.Winrate, Model.PerInput.Gamepad.Squad.PlaceTop1, Model.PerInput.Gamepad.Squad.Kills, Model.PerInput.Gamepad.Squad.MatchesPlayed, "Squad (Console)"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Solo (Keyboard & Mouse) -->
+    @if (Model.PerInput?.KeyboardMouse?.Solo != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.PerInput.KeyboardMouse.Solo.Kd, Model.PerInput.KeyboardMouse.Solo.Winrate, Model.PerInput.KeyboardMouse.Solo.PlaceTop1, Model.PerInput.KeyboardMouse.Solo.Kills, Model.PerInput.KeyboardMouse.Solo.MatchesPlayed, "Solo (Keyboard & Mouse)"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Duo (Keyboard & Mouse) -->
+    @if (Model.PerInput?.KeyboardMouse?.Duo != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.PerInput.KeyboardMouse.Duo.Kd, Model.PerInput.KeyboardMouse.Duo.Winrate, Model.PerInput.KeyboardMouse.Duo.PlaceTop1, Model.PerInput.KeyboardMouse.Duo.Kills, Model.PerInput.KeyboardMouse.Duo.MatchesPlayed, "Duo (Keyboard & Mouse)"))</p>
+        <hr />
+    }
+
+    <!-- Feedback for Squad (Keyboard & Mouse) -->
+    @if (Model.PerInput?.KeyboardMouse?.Squad != null)
+    {
+        <p>@Html.Raw(GenerateFeedback(Model.PerInput.KeyboardMouse.Squad.Kd, Model.PerInput.KeyboardMouse.Squad.Winrate, Model.PerInput.KeyboardMouse.Squad.PlaceTop1, Model.PerInput.KeyboardMouse.Squad.Kills, Model.PerInput.KeyboardMouse.Squad.MatchesPlayed, "Squad (Keyboard & Mouse)"))</p>
+        <hr />
+    }
+</div>
+
+@functions {
+    // if else based feedback generation logic with more detailed analysis
+    private string GenerateFeedback(double kd, double winrate, int topPlacements, int totalKills, int matchesPlayed, string gameMode)
+    {
+        string feedback = $"<span class=\"feedback-title\">{gameMode}:</span> ";
+
+        // K/D Ratio based feedback
+        if (kd < 0.5)
+        {
+            feedback += "Your kill-to-death ratio is significantly below average. Consider working on your aiming skills and movement to avoid getting eliminated early. ";
+        }
+        else if (kd >= 0.5 && kd < 1.0)
+        {
+            feedback += "Your kill-to-death ratio is below average. Try to improve your positioning and awareness in battles to gain an edge over opponents. ";
+        }
+        else if (kd >= 1.0 && kd < 2.0)
+        {
+            feedback += "Your kill-to-death ratio is solid, showing you can hold your own in fights. Keep practicing to improve your consistency. ";
+        }
+        else if (kd >= 2.0)
+        {
+            feedback += "Great job! Your kill-to-death ratio is excellent, and you’re dominating your fights. Keep up the strong performance! ";
+        }
+
+        // Win rate based feedback
+        if (winrate < 0.05)
+        {
+            feedback += "However, your win rate is low. Consider focusing more on game strategy, including your rotations and late-game positioning. ";
+        }
+        else if (winrate >= 0.05 && winrate < 0.15)
+        {
+            feedback += "Your win rate is decent but could be improved. Work on improving your decision-making during critical moments in the game. ";
+        }
+        else if (winrate >= 0.15)
+        {
+            feedback += "Your win rate is strong, reflecting good decision-making and game awareness. Keep refining your strategy to continue improving. ";
+        }
+
+        // Top 1 placements feedback
+        if (topPlacements == 0)
+        {
+            feedback += "You haven’t managed to secure a Victory Royale yet. Keep grinding, and focus on staying calm during high-pressure situations!";
+        }
+        else if (topPlacements > 0 && topPlacements < 5)
+        {
+            feedback += "You’ve managed a few top 1 placements, which is impressive. With a bit more practice, you can increase your wins!";
+        }
+        else if (topPlacements >= 5)
+        {
+            feedback += "You’ve achieved multiple Victory Royales, showing great skill! Keep pushing for more!";
+        }
+
+        // Total Kills feedback
+        if (totalKills < 100)
+        {
+            feedback += " Your total kills are relatively low, suggesting you might benefit from engaging in more fights to improve your combat skills. ";
+        }
+        else if (totalKills >= 100 && totalKills < 500)
+        {
+            feedback += " You have a solid number of kills! This indicates you’re actively engaging in battles and improving. Keep working on your techniques. ";
+        }
+        else if (totalKills >= 500)
+        {
+            feedback += " Your kill count is very high! You’re clearly skilled in combat. Keep up the amazing work! ";
+        }
+
+        // Matches Played feedback
+        if (matchesPlayed < 50)
+        {
+            feedback += " You haven’t played many matches yet. Keep practicing to gain more experience and refine your strategies.";
+        }
+        else if (matchesPlayed >= 50 && matchesPlayed < 200)
+        {
+            feedback += " You have a good amount of experience from the matches you’ve played. Keep building on that foundation to improve even more.";
+        }
+        else if (matchesPlayed >= 200)
+        {
+            feedback += " You’ve played a lot of matches, showing a high level of commitment and experience. Keep using that experience to enhance your skills!";
+        }
+
+        return feedback;
+    }
+}
+
+<script src="~/js/tabs.js"></script>
