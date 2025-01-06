@@ -1,0 +1,16 @@
+# Ignore sensitive config files
+appsettings.json
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore Visual Studio/JetBrains Rider settings
+.vs/
+*.user
+*.suo
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
